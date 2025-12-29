@@ -156,90 +156,6 @@
             color: #667eea;
         }
 
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            z-index: 101;
-        }
-
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background: #fff;
-            margin: 3px 0;
-            transition: 0.3s;
-            border-radius: 3px;
-        }
-
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(-45deg) translate(-5px, 6px);
-        }
-
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
-        }
-
-        .mobile-menu {
-            display: none;
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 70%;
-            height: 100vh;
-            background: rgba(10, 10, 10, 0.98);
-            backdrop-filter: blur(20px);
-            padding: 5rem 2rem;
-            transition: right 0.3s ease;
-            z-index: 100;
-            border-left: 1px solid rgba(102, 126, 234, 0.3);
-        }
-
-        .mobile-menu.active {
-            right: 0;
-        }
-
-        .mobile-menu ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .mobile-menu ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.5rem;
-            transition: color 0.3s;
-            display: block;
-            padding: 0.5rem 0;
-        }
-
-        .mobile-menu ul li a:hover {
-            color: #667eea;
-        }
-
-        .menu-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 99;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .menu-overlay.active {
-            opacity: 1;
-        }
-
         section {
             min-height: 100vh;
             padding: 5rem 5%;
@@ -614,22 +530,6 @@
         }
 
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            .mobile-menu {
-                display: block;
-            }
-
-            .menu-overlay {
-                display: block;
-            }
-
             .hero h1 {
                 font-size: 2.5rem;
             }
@@ -637,207 +537,92 @@
             .hero h2 {
                 font-size: 1.5rem;
             }
-
-            .hero p {
-                font-size: 1rem;
-                padding: 0 1rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                width: 100%;
-                padding: 0 1rem;
-            }
-
-            .cta-button {
-                width: 100%;
-                text-align: center;
-            }
             
             .nav-links {
-                gap: 0.5rem;
-                font-size: 0.85rem;
+                gap: 1rem;
+                font-size: 0.9rem;
             }
             
             .logo {
-                font-size: 1.3rem;
-            }
-
-            nav {
-                padding: 1.5rem 3%;
+                font-size: 1.4rem;
             }
             
             section {
-                padding: 3rem 3%;
-                min-height: auto;
-            }
-
-            .section-title {
-                font-size: 2rem;
-                margin-bottom: 2rem;
-            }
-
-            .about-content p {
-                font-size: 1rem;
-            }
-
-            .stats {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-
-            .stat-card {
-                padding: 1.5rem;
-            }
-
-            .skills-category h3 {
-                font-size: 1.3rem;
-            }
-
-            .skill-tag {
-                padding: 0.6rem 1rem;
-                font-size: 0.9rem;
+                padding: 3rem 5%;
             }
 
             .projects-grid {
                 grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .project-header {
-                padding: 1.5rem;
-            }
-
-            .project-icon {
-                font-size: 2.5rem;
-            }
-
-            .project-title {
-                font-size: 1.5rem;
-            }
-
-            .project-content {
-                padding: 1.2rem 1.5rem;
-            }
-
-            .project-description {
-                font-size: 0.95rem;
-            }
-
-            .project-links {
-                flex-direction: column;
-            }
-
-            .project-link {
-                text-align: center;
-            }
-
-            .experience-card {
-                padding: 1.5rem;
             }
 
             .experience-header {
                 flex-direction: column;
             }
+        }
+        /* ===== Mobile Navbar ===== */
 
-            .experience-title h3 {
-                font-size: 1.5rem;
-            }
-
-            .experience-description {
-                font-size: 0.95rem;
-            }
-
-            .contact-content p {
-                font-size: 1rem;
-                padding: 0 1rem;
-            }
-
-            .contact-item {
-                font-size: 1rem;
-                flex-wrap: wrap;
-            }
-
-            .contact-links {
-                flex-direction: column;
-                width: 100%;
-                padding: 0 1rem;
-            }
-
-            .contact-link {
-                width: 100%;
-                text-align: center;
-            }
-
-            .loader-logo {
-                font-size: 3rem;
-            }
-
-            .loader-ring {
-                width: 60px;
-                height: 60px;
-            }
-
-            .loader-text {
-                font-size: 1rem;
-            }
-
-            .loader-progress {
-                width: 150px;
-            }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+            z-index: 200;
         }
 
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: #fff;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
 
-            .hero h2 {
-                font-size: 1.2rem;
+        /* Mobile styles */
+        @media (max-width: 768px) {
+
+            .hamburger {
+                display: flex;
             }
 
             .nav-links {
-                gap: 0.3rem;
-                font-size: 0.75rem;
+                position: fixed;
+                top: 80px;
+                right: 0;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: rgba(10, 10, 10, 0.95);
+                backdrop-filter: blur(12px);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                transform: translateY(-120%);
+                transition: transform 0.4s ease;
+                z-index: 150;
             }
 
-            .logo {
-                font-size: 1.1rem;
+            .nav-links.active {
+                transform: translatex(0);
             }
 
-            nav {
-                padding: 1rem 3%;
+            .nav-links a {
+                font-size: 1.5rem;
             }
 
-            .section-title {
-                font-size: 1.8rem;
+            /* Animate hamburger into X */
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(6px, 6px);
             }
 
-            .stat-card h3 {
-                font-size: 2rem;
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
             }
 
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .project-image {
-                height: 150px;
-            }
-
-            .loader-logo {
-                font-size: 2.5rem;
-            }
-
-            .loader-ring {
-                width: 50px;
-                height: 50px;
-            }
-
-            .loader-text {
-                font-size: 0.9rem;
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(6px, -6px);
             }
         }
+
     </style>
 </head>
 <body>
@@ -852,30 +637,20 @@
         </div>
     </div>
 
-    <div class="menu-overlay" id="menuOverlay"></div>
-
     <canvas id="canvas"></canvas>
     
     <div class="content">
         <nav>
             <div class="logo">Mayukh Jain</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+
+            <!-- Hamburger -->
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-        </nav>
 
-        <div class="mobile-menu" id="mobileMenu">
-            <ul>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -883,7 +658,8 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </div>
+        </nav>
+
 
         <section id="home" class="hero">
             <h1>Hi, I'm Mayukh Jain</h1>
@@ -1068,7 +844,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -1134,8 +909,8 @@
                 </div>
 
                 <div class="contact-links">
-                    <a href="mailto:jainmayukh@gmail.com" class="contact-link">Email Me</a>
-                    <a href="www.linkedin.com/in/mayukh-jain-b4732128a" class="contact-link" target="_blank">LinkedIn</a>
+                   <a href="mailto:jainmayukh@gmail.com" class="contact-link">Email Me</a>
+                    <a href="https://www.linkedin.com/in/mayukh-jain-b4732128a" class="contact-link" target="_blank">LinkedIn</a>
                     <a href="https://github.com/Mayukh-Jain" class="contact-link" target="_blank">GitHub</a>
                 </div>
             </div>
@@ -1248,41 +1023,8 @@
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth' });
-                    // Close mobile menu if open
-                    if (window.innerWidth <= 768) {
-                        mobileMenu.classList.remove('active');
-                        hamburger.classList.remove('active');
-                        menuOverlay.classList.remove('active');
-                        document.body.style.overflow = 'auto';
-                    }
                 }
             });
-        });
-
-        // Hamburger menu functionality
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const menuOverlay = document.getElementById('menuOverlay');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-            menuOverlay.classList.toggle('active');
-            
-            // Prevent body scroll when menu is open
-            if (mobileMenu.classList.contains('active')) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = 'auto';
-            }
-        });
-
-        // Close menu when clicking overlay
-        menuOverlay.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            menuOverlay.classList.remove('active');
-            document.body.style.overflow = 'auto';
         });
 
         init();
@@ -1294,6 +1036,23 @@
                 document.getElementById('loader').classList.add('hidden');
             }, 2000);
         });
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        // Toggle menu
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu on link click (mobile)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
     </script>
 </body>
 </html>
