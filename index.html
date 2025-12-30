@@ -613,11 +613,17 @@
           right: 0;
           width: 100%;
           height: calc(100vh - 80px);
-          background: rgba(10, 10, 10, 0.7);
-          backdrop-filter: blur(18px) saturate(160%);
-          -webkit-backdrop-filter: blur(18px) saturate(160%);
-          border-top: 1px solid rgba(255, 255, 255, 0.15);
-          /* backdrop-filter: blur(12px); */
+          background: linear-gradient(
+            180deg,
+            rgba(10, 10, 10, 0.98) 0%,
+            rgba(20, 15, 30, 0.95) 50%,
+            rgba(10, 10, 10, 0.98) 100%
+          );
+          backdrop-filter: blur(25px) saturate(200%);
+          -webkit-backdrop-filter: blur(25px) saturate(200%);
+          border-top: 2px solid rgba(102, 126, 234, 0.5);
+          box-shadow: 0 -8px 32px rgba(102, 126, 234, 0.15),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
           flex-direction: column;
           align-items: center;
           justify-content: center;
@@ -626,6 +632,31 @@
           transition: transform 0.4s ease;
           z-index: 150;
         }
+        
+        /* Create glass effect with pseudo-element */
+        .nav-links::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(
+            135deg,
+            rgba(102, 126, 234, 0.1) 0%,
+            rgba(118, 75, 162, 0.05) 50%,
+            rgba(102, 126, 234, 0.1) 100%
+          );
+          pointer-events: none;
+          z-index: -1;
+        }
+        
+        /* Fallback for browsers that don't support backdrop-filter */
+        /* @supports not (backdrop-filter: blur(20px)) {
+          .nav-links {
+            background: rgba(10, 10, 10, 0.98);
+          }
+        } */
 
         .nav-links.active {
           transform: translatex(0);
