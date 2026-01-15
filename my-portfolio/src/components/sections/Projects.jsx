@@ -27,7 +27,7 @@ const Projects = () => {
       </AnimatePresence>
 
       <div className="mb-12 border-b border-white/10 pb-4">
-        <span className="text-xs font-mono text-gray-500 uppercase tracking-widest">03 / Selected Work</span>
+        <span className="text-xs font-mono text-gray-500 uppercase tracking-widest">03 / Selected Projects</span>
       </div>
 
       <div className="relative" onMouseMove={handleMouseMove}>
@@ -45,7 +45,7 @@ const Projects = () => {
                   {project.title}
                 </h2>
                 <div className="flex flex-wrap gap-2 mt-3 md:group-hover:translate-x-4 transition-transform duration-500">
-                  {project.tech.slice(0, 3).map((t) => (
+                  {project.tech.slice(0, 5).map((t) => (
                     <span key={t} className="text-[10px] md:text-xs font-mono text-gray-500 bg-white/5 px-2 py-1 rounded">
                       {t}
                     </span>
