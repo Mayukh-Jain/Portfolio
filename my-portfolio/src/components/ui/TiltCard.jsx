@@ -8,8 +8,8 @@ const TiltCard = ({ children, className }) => {
   const mouseX = useSpring(x, { stiffness: 150, damping: 15 });
   const mouseY = useSpring(y, { stiffness: 150, damping: 15 });
 
-  const rotateX = useTransform(mouseY, [-0.5, 0.5], ["7deg", "-7deg"]);
-  const rotateY = useTransform(mouseX, [-0.5, 0.5], ["-7deg", "7deg"]);
+  const rotateX = useTransform(mouseY, [-0.5, 0.5], ["25deg", "-25deg"]);
+  const rotateY = useTransform(mouseX, [-0.5, 0.5], ["-25deg", "25deg"]);
 
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
