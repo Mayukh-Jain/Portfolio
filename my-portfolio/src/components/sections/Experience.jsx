@@ -10,7 +10,7 @@ const Experience = () => {
       <FadeIn>
         <div className="mb-16 border-b border-white/10 pb-4">
           <span className="text-xs font-mono text-gray-500 uppercase tracking-widest">
-            02 / Experience
+            04 / Experience
           </span>
         </div>
       </FadeIn>

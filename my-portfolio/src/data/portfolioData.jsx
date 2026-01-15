@@ -5,11 +5,11 @@ export const personalDetails = {
   phone: "+91-7007535723",
   location: "Bhopal, India",
   links: {
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
-    leetcode: "https://leetcode.com",
-    codeforces: "https://codeforces.com",
-    credly: "https://credly.com"
+    github: "https://github.com/Mayukh-Jain",
+    linkedin: "https://www.linkedin.com/in/mayukh-jain-b4732128a",
+    leetcode: "https://leetcode.com/u/Fey5VQ6tLR/",
+    codeforces: "https://codeforces.com/profile/jackspar",
+    credly: "https://www.credly.com/users/mayukh-jain.4c6b99fe/badges#credly"
   }
 };
 
@@ -21,8 +21,8 @@ export const projects = [
     src: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=2525&auto=format&fit=crop",
     tech: ["React", "FastAPI", "RAG", "Qdrant", "Google Gemini"],
     description: "A semantic search engine and movie recommendation system. Indexes 10,000+ movie embeddings using Qdrant for natural language discovery. Integrated RAG with Google Gemini to generate context-aware, AI-driven movie explanations. Deployed via Docker microservices on Vercel and Hugging Face.",
-    liveLink: "#",
-    repoLink: "#"
+    liveLink: "https://cine-ai-vert.vercel.app/",
+    repoLink: "https://github.com/Mayukh-Jain/Cine-Ai"
   },
   {
     id: 2,
@@ -31,8 +31,8 @@ export const projects = [
     src: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=2670&auto=format&fit=crop",
     tech: ["TensorFlow (CNN)", "DeepSeek API", "FastAPI", "React"],
     description: "Full-stack AgriAI application featuring disease diagnosis, crop prediction, and yield forecasting with ~90% accuracy using CNNs. Includes a context-aware AI chatbot powered by DeepSeek-V3.2 API for instant agricultural advice. Scalable containerized deployment.",
-    liveLink: "#",
-    repoLink: "#"
+    liveLink: "https://leafcompass.vercel.app/",
+    repoLink: "https://github.com/Mayukh-Jain/Leaf-Compass"
   },
   {
     id: 3,
@@ -41,8 +41,8 @@ export const projects = [
     src: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2600&auto=format&fit=crop",
     tech: ["Llama 3", "Pinecone", "RAG", "FastAPI", "Docker"],
     description: "AI companion interpreting the Bhartiya Nyaya Sanhita (BNS) with 98% accuracy. Architected a vector search pipeline to query 15k+ precedents in sub-second time. Features an AI Verdict Predictor and Automated Document Drafter using Llama 3.3 via Groq.",
-    liveLink: "#",
-    repoLink: "#"
+    liveLink: "https://samvidhan-ai-psi.vercel.app/",
+    repoLink: "https://github.com/Mayukh-Jain/Nyaya.AI"
   },
   {
     id: 4,
@@ -51,8 +51,8 @@ export const projects = [
     src: "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?q=80&w=2670&auto=format&fit=crop",
     tech: ["Python", "Scikit-learn", "Random Forest", "Flask", "OpenWeather API"],
     description: "ML-powered flood risk assessment system achieving 80-90% accuracy. Integrates real-time weather data via OpenWeather API to improve forecasting efficiency by 40%. Deployed as a Flask web application for instant risk analysis.",
-    liveLink: "#",
-    repoLink: "#"
+    liveLink: "https://flood-prediction-app-05sz.onrender.com/",
+    repoLink: "https://github.com/Mayukh-Jain/Flood_Prediction_App"
   },
 ];
 

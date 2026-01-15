@@ -27,7 +27,7 @@ const Projects = () => {
       </AnimatePresence>
 
       <div className="mb-12 border-b border-white/10 pb-4">
-        <span className="text-xs font-mono text-gray-500 uppercase tracking-widest">01 / Selected Work</span>
+        <span className="text-xs font-mono text-gray-500 uppercase tracking-widest">03 / Selected Work</span>
       </div>
 
       <div className="relative" onMouseMove={handleMouseMove}>

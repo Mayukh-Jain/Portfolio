@@ -30,7 +30,7 @@ const Hero = () => {
               Aspiring Data Scientist & ML Engineer
             </h2>
             <p className="text-lg md:text-xl text-gray-400 max-w-lg mb-10 md:mb-12 leading-relaxed">
-               Specializing in predictive modeling, Computer Vision, and Generative AI. 
+               Specializing in predictive modeling, Computer Vision, Cloud Computing and Generative AI. 
                Building scalable, data-driven applications with Python, TensorFlow, and AWS.
             </p>
             <div className="flex gap-4">

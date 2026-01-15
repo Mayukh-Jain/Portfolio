@@ -45,10 +45,10 @@ export default function App() {
       
       <Navbar />
       <Hero />
+      <About />
+      <Skills />
       <Projects />
       <Experience />
-      <Skills />
-      <About />
       <Footer />
     </div>
   );

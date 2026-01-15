@@ -7,7 +7,7 @@ const About = () => {
   return (
     <section id="about" className="relative z-10 py-20 md:py-32 px-6 max-w-4xl mx-auto">
       <div className="mb-16 border-b border-white/10 pb-4">
-        <span className="text-xs font-mono text-gray-500 uppercase tracking-widest">04 / About Me</span>
+        <span className="text-xs font-mono text-gray-500 uppercase tracking-widest">01 / About Me</span>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
