@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/* Optional: smooth scrolling for the whole html */
+html {
+  scroll-behavior: smooth;
+  background-color: black; 
+}
