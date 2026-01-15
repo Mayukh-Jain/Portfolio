@@ -39,7 +39,7 @@ export default function App() {
       
       {/* Scroll Progress Bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-white origin-left z-50 mix-blend-difference"
+        className="fixed top-0 left-0 right-0 h-1 bg-white origin-left z-60 mix-blend-difference"
         style={{ scaleX }}
       />
       
