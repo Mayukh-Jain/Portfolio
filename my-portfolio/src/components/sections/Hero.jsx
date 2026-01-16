@@ -17,7 +17,7 @@ const Hero = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-40 items-center">
         
         {/* --- LEFT SIDE: Original Text Content --- */}
-        <div className="pointer-events-auto order-2 md:order-1 relative z-20 md:left-12">
+        <div className="pointer-events-auto order-2 md:order-1 relative z-20 ">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -46,7 +46,7 @@ const Hero = () => {
         </div>
 
         {/* --- RIGHT SIDE: New 3D Spline Scene --- */}
-        <div className="hidden md:block md:order-2 h-[400px] md:h-[600px] w-full relative z-10 md:right-12">
+        <div className="hidden md:block md:order-2 h-[400px] md:h-[600px] w-full relative z-10 ">
           <Card className="w-full h-full bg-black/40 border-white/10 relative overflow-hidden rounded-2xl">
            
             <div className="absolute inset-0 z-0 group">
