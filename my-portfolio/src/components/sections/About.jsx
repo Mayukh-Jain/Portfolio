@@ -2,7 +2,7 @@ import React from "react";
 import { BookOpen, Award } from "lucide-react";
 import { education, certifications } from "../../data/portfolioData";
 import FadeIn from "../ui/FadeIn";
-import profileImg from "../../assets/profile.jpg"; // <--- Import your image here
+import profileImg from "../../assets/image.png"; // <--- Import your image here
 
 const About = () => {
   return (

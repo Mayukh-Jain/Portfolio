@@ -16,7 +16,7 @@ const SpotlightBackground = () => {
 
   const background = useMotionTemplate`radial-gradient(
     500px circle at ${mouseX}px ${mouseY}px,
-    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.12),
     transparent 80%
   )`;
 
