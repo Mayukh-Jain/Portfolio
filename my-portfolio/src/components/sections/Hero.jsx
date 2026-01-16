@@ -38,7 +38,7 @@ const Hero = () => {
               <a href="#work" className="inline-flex items-center gap-2 text-white border-b border-white pb-1 hover:text-gray-400 hover:border-gray-400 transition-colors">
                 View Projects <ArrowRight size={16} />
               </a>
-              <a href={personalDetails.links.github} className="inline-flex items-center gap-2 text-gray-400 border-b border-gray-400 pb-1 hover:text-white hover:border-white transition-colors">
+              <a href={personalDetails.links.github} target="_blank" className="inline-flex items-center gap-2 text-gray-400 border-b border-gray-400 pb-1 hover:text-white hover:border-white transition-colors">
                 GitHub <ExternalLink size={16} />
               </a>
             </div>

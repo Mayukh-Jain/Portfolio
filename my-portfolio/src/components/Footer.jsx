@@ -38,13 +38,13 @@ const Footer = () => {
             </p>
             <div className="space-y-4">
               <a 
-                href={`mailto:${personalDetails.email}`}
+                href={`mailto:${personalDetails.email}`}  target="_blank"
                 className="flex items-center gap-3 text-xl text-white hover:text-gray-300 transition-colors"
               >
                 <Mail /> {personalDetails.email}
               </a>
               <a 
-                href={`tel:${personalDetails.phone}`}
+                href={`tel:${personalDetails.phone}`}  target="_blank"
                 className="flex items-center gap-3 text-xl text-white hover:text-gray-300 transition-colors"
               >
                 <Phone /> {personalDetails.phone}

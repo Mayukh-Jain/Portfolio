@@ -13,7 +13,7 @@ const Skills = () => {
         {skillsData.map((skillGroup, index) => (
           <TiltCard 
             key={index} 
-            className="border border-white/10 p-6 md:p-8 rounded-xl bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-sm group hover:border-white/30 transition-colors"
+            className="border border-white/12 p-6 md:p-8 rounded-xl bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-sm group hover:border-white/50 transition-colors"
           >
              <h3 className="text-lg md:text-xl font-bold text-white mb-6 flex items-center gap-3">
                <span className="w-2 h-2 bg-gray-500 rounded-full group-hover:bg-white transition-colors shadow-[0_0_10px_rgba(255,255,255,0.5)]"></span>
