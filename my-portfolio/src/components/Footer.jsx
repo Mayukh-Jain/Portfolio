@@ -16,9 +16,9 @@ const HuggingFaceIcon = ({ size = 18, className }) => (
   </svg>
 );
 
-const CheggIcon = ({ size = 18, className }) => (
+const CredlyIcon = ({ size = 18, className }) => (
   <svg role="img" viewBox="0 0 24 24" width={size} height={size} fill="currentColor" className={className} xmlns="http://www.w3.org/2000/svg">
-    <path d="M12.016 0C5.391 0 0 5.381 0 12.008c0 6.627 5.391 12.008 12.016 12.008 6.616 0 12.008-5.381 12.008-12.008S18.632 0 12.016 0zM8.96 7.647h6.065v2.304h-3.48v2.103h2.952v2.128h-2.952v2.32H15.16v2.304H6.384V7.647H8.96z"/>
+    <path d="M13.33 0c6.048 1.096 10.63 6.36 10.63 12.72 0 7.152-5.783 12.952-12.915 12.952-6.522 0-11.939-4.809-13.065-11.08h6.293c1.077 2.872 3.824 4.908 7.058 4.908 4.14 0 7.502-3.359 7.502-7.5s-3.361-7.5-7.502-7.5c-3.142 0-5.832 1.917-6.96 4.655H-0.28C.674 3.922 5.676 0 11.644 0h1.688Z"/>
   </svg>
 );
 
@@ -64,7 +64,7 @@ const Footer = () => {
                 <li><a href={personalDetails.links.huggingface} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"><HuggingFaceIcon size={18} /> Hugging Face</a></li>
                 
                 {/* --- Certification & Expert Profiles --- */}
-                <li><a href={personalDetails.links.chegg} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"><CheggIcon size={18} /> Chegg</a></li>
+                <li><a href={personalDetails.links.credly} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"><CredlyIcon size={18} /> Credly</a></li>
                 <li><a href={personalDetails.links.leetcode} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"><Code size={18} /> Leetcode</a></li>
                 <li><a href={personalDetails.links.codeforces} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"><Terminal size={18} /> Codeforces</a></li>
               </ul>
