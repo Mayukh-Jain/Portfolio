@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowRight, ExternalLink , FileText} from "lucide-react";
 import { personalDetails } from "../../data/portfolioData";
 
 // New Imports
@@ -40,6 +40,14 @@ const Hero = () => {
               </a>
               <a href={personalDetails.links.github} target="_blank" className="inline-flex items-center gap-2 text-gray-400 border-b border-gray-400 pb-1 hover:text-white hover:border-white transition-colors">
                 GitHub <ExternalLink size={16} />
+              </a>
+              <a 
+                href="/My_Resume.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-gray-400 border-b border-gray-400 pb-1 hover:text-white hover:border-white transition-colors"
+              >
+                Resume <FileText size={16} />
               </a>
             </div>
           </motion.div>
