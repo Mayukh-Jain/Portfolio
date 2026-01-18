@@ -11,6 +11,7 @@ export const personalDetails = {
   location: "Bhopal, India",
   links: {
     github: "https://github.com/Mayukh-Jain",
+    instagram: "https://www.instagram.com/mayukh__jain",
     linkedin: "https://www.linkedin.com/in/mayukh-jain-b4732128a",
     leetcode: "https://leetcode.com/u/Fey5VQ6tLR/",
     codeforces: "https://codeforces.com/profile/jackspar",

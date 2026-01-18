@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Phone, Linkedin, Github, Code, Terminal } from "lucide-react";
+import { Mail, Phone, Linkedin, Github, Code, Terminal, Instagram } from "lucide-react";
 import { personalDetails } from "../data/portfolioData";
 
 // --- Custom Icons for Platforms ---
@@ -57,6 +57,7 @@ const Footer = () => {
               <h4 className="text-white font-bold uppercase tracking-widest mb-4 text-xs md:text-sm">Profiles</h4>
               <ul className="space-y-3 text-sm md:text-base">
                 <li><a href={personalDetails.links.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"><Linkedin size={18} /> LinkedIn</a></li>
+                <li><a href={personalDetails.links.instagram} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"><Instagram size={18} /> Instagram</a></li>
                 <li><a href={personalDetails.links.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"><Github size={18} /> GitHub</a></li>
                 
                 {/* --- Data Science Profiles --- */}
