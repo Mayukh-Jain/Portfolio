@@ -9,7 +9,7 @@ const Experience = () => {
       {/* Section Header */}
       <div className="mb-16 border-b border-white/10 pb-4 flex items-center justify-between">
         <span className="text-xs font-mono text-blue-400 uppercase tracking-widest border border-blue-500/20 bg-blue-500/5 px-3 py-1 rounded-full">
-          03 / Experience
+          04 / Experience
         </span>
       </div>
 

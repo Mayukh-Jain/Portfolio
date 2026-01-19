@@ -11,7 +11,7 @@ const Contact = () => {
         <div className="flex items-center gap-4 mb-16">
           <div className="h-px bg-white/10 flex-1" />
           <span className="text-xs font-mono text-blue-400 uppercase tracking-widest border border-blue-500/20 bg-blue-500/5 px-3 py-1 rounded-full">
-            06 / Get In Touch
+            05 / Get In Touch
           </span>
           <div className="h-px bg-white/10 flex-1" />
         </div>

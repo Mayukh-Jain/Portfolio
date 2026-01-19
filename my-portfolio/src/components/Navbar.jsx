@@ -13,9 +13,9 @@ import {
 const navItems = [
   { id: "home", name: "Home", href: "#", icon: <Home size={18} className="sm:w-5 sm:h-5" /> },
   { id: "about", name: "About", href: "#about", icon: <User size={18} className="sm:w-5 sm:h-5" /> },
-  { id: "experience", name: "Experience", href: "#experience", icon: <Briefcase size={18} className="sm:w-5 sm:h-5" /> },
   { id: "skills", name: "Skills", href: "#skills", icon: <Code2 size={18} className="sm:w-5 sm:h-5" /> },
   { id: "work", name: "Projects", href: "#work", icon: <Layers size={18} className="sm:w-5 sm:h-5" /> },
+  { id: "experience", name: "Experience", href: "#experience", icon: <Briefcase size={18} className="sm:w-5 sm:h-5" /> },
   { id: "contact", name: "Contact", href: "#contact", icon: <Mail size={18} className="sm:w-5 sm:h-5" /> },
 ];
 
