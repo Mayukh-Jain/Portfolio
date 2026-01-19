@@ -5,3 +5,14 @@ html {
   scroll-behavior: smooth;
   background-color: black; 
 }
+
+/* index.css */
+body {
+  cursor: none; /* Hides default cursor */
+}
+
+/* Optional: Ensure links/buttons don't force the pointer back */
+a, button, [role="button"] {
+  cursor: none !important;
+}
+

@@ -64,13 +64,40 @@ export const projects = [
   },
 ];
 
-export const experience = [
+// export const experience = [
+//   {
+//     year: "Oct 2024 – Present",
+//     role: "Technical Team Member",
+//     company: "TechnoMech Club (VIT Bhopal)",
+//     description: "Spearheading technical operations for coding contests and workshops (100+ students). Co-developed and maintaining the club's official website, focusing on load time optimization and mobile responsiveness.",
+//   }
+// ];
+
+// data/portfolioData.js
+export const experienceData = [
   {
-    year: "Oct 2024 – Present",
+    role: "Cloud Engineering Intern",
+    company: "CloudAILabs",
+    companyUrl: "https://cloudailabs.in/", // Optional
+    date: "Jan 2026 – Present",
+    description: [
+      "Optimized Docker container orchestration, reducing deployment time by 40%.",
+      "Assisted in setting up CI/CD pipelines using GitHub Actions and AWS CodePipeline.",
+      "Learnt Various new concepts in cloud engineering."
+    ],
+    tech: ["AWS", "Docker", "CI/CD", "Linux"]
+  },
+  {
     role: "Technical Team Member",
-    company: "TechnoMech Club (VIT Bhopal)",
-    description: "Spearheading technical operations for coding contests and workshops (100+ students). Co-developed and maintaining the club's official website, focusing on load time optimization and mobile responsiveness.",
-  }
+    company: "TechnoMech Club",
+    date: "Aug 2024 – Present",
+    description: [
+      "Mentored 50+ students in Python and Basic Data Structures.",
+      "Organized 3 major hackathons, managing technical logistics for 200+ participants."
+    ],
+    tech: ["Leadership", "Python", "Event Management"]
+  },
+  // Add more...
 ];
 
 export const education = [
@@ -79,7 +106,21 @@ export const education = [
     degree: "B.Tech CSE (Cloud Computing & Automation)",
     year: "2023 – Present",
     score: "CGPA: 8.34"
-  }
+  },
+  // {
+  //   institution: "Little Flower House", // Replace with your School Name
+  //   degree: "Higher Secondary (Class XII)",
+  //   year: "2021 - 2023",
+  //   score: "", // Replace with your score
+  //   desc: "Science Stream (PCM) with Computer Science"
+  // },
+  // {
+  //   institution: "Sacred Heart Convent School", // Replace with your School Name
+  //   degree: "Secondary School (Class X)",
+  //   year: "2009 - 2021",
+  //   score: "", // Replace with your score
+  //   desc: "General Studies"
+  // }
 ];
 
 export const certifications = [

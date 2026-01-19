@@ -1,79 +1,93 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { ArrowRight, ExternalLink , FileText} from "lucide-react";
-import { personalDetails } from "../../data/portfolioData";
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import LImg from '../../assets/hero.png';
+import { VelocityScroll } from "../../components/ui/scroll-based-velocity";
 
-// New Imports
-import { SplineScene } from "../ui/SplineScene";
-import { Card } from "../ui/Card";
-import { Spotlight } from "../ui/Spotlight";
-import profileImg from "../../assets/profile.jpg"; // Importing the profile image
+const HeroSection = () => {
+  const [time, setTime] = useState("");
 
-const Hero = () => {
+  useEffect(() => {
+    const updateTime = () => {
+      setTime(new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }));
+    };
+    
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className="relative z-10 min-h-screen w-full flex items-center justify-center px-6 pt-20 md:pt-0 overflow-hidden">
+    <section className="relative h-dvh w-full bg-[#0a0a0a] text-white overflow-hidden flex flex-col">
       
-      {/* Container for the 2-column layout */}
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-40 items-center">
+      {/* --- BACKGROUND MARQUEE LAYER --- */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 opacity-20 md:opacity-30">
+        <VelocityScroll
+          text="MAYUKH JAIN"
+          default_velocity={3}
+          className="font-['Syncopate'] text-center text-[30vw] md:text-[15vw] font-bold leading-none text-transparent [-webkit-text-stroke:2px_white] md:[-webkit-text-stroke:2px_white] select-none"
+        />
+      </div>
+
+      {/* --- FOREGROUND IMAGE LAYER --- */}
+      {/* Mobile: Align Right (justify-end). Desktop: Align Center (md:justify-center) */}
+      <div className="absolute inset-0 flex items-end justify-end md:justify-center z-10 pointer-events-none">
+        <motion.img 
+          initial={{ scale: 1.1, opacity: 0, filter: "blur(10px)" }}
+          animate={{ scale: 1, opacity: 1, filter: "blur(0px)" }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          src={LImg}
+          className="
+            /* MOBILE STYLES: Giant size, pushed to bottom right */
+            w-[180%] max-w-none 
+            translate-x-[35%] translate-y-[5%] 
+            
+            /* DESKTOP STYLES: Normal size, centered */
+            md:w-auto md:h-[95%] md:max-w-full
+            md:translate-x-0 md:translate-y-0
+            
+            object-contain grayscale hover:grayscale-0 transition-all duration-700 pointer-events-auto
+          " 
+        />
+      </div>
+
+      {/* --- UI CONTENT LAYER --- */}
+      {/* Mobile: justify-between (Spreads Top/Bottom). Desktop: justify-end (Bottom aligned). */}
+      <div className="relative z-20 flex flex-col h-full p-6 md:p-10 justify-between md:justify-end pt-15 pb-20 md:pt-0 md:pb-10">
         
-        
-        {/* --- LEFT SIDE: Original Text Content --- */}
-        <div className="pointer-events-auto order-2 md:order-1 relative z-20 ">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <h1 className="text-[12vw] md:text-[6.5vw] leading-[0.85] font-bold tracking-tighter text-white uppercase mb-6 md:mb-8 mix-blend-overlay">
-              MAYUKH <br />
-              <span className="text-gray-500">JAIN</span>
-            </h1>
-            <h2 className="text-2xl md:text-3xl text-white font-light tracking-tight mb-8">
-              Aspiring Data Scientist & ML Engineer
+        {/* Wrapper: Handles flex direction switch between Mobile (col) and Desktop (row) */}
+        <div className="flex flex-col md:flex-row justify-between w-full h-full md:h-auto md:items-end">
+          
+          {/* 1. TOP LEFT (Mobile) / BOTTOM LEFT (Desktop): Role & Description */}
+          <div className="flex flex-col gap-3 md:gap-3">
+            <h2 className="text-5xl md:text-7xl text-white font-medium tracking-tight leading-[0.9]">
+              Cloud & AI<br/>Engineer
             </h2>
-            <p className="text-lg md:text-xl text-gray-400 max-w-lg mb-10 md:mb-12 leading-relaxed">
-               Specializing in predictive modeling, Computer Vision, Cloud Computing and Generative AI. 
-               Building scalable, data-driven applications with Python, TensorFlow, and AWS.
+            
+            <p className="text-sm md:text-base text-gray-300 md:text-gray-400 max-w-[280px] md:max-w-[300px] leading-snug opacity-90">
+              Specializing in Automation, DevOps, and Intelligent Systems.
             </p>
-            <div className="flex gap-4">
-              <a href="#work" className="inline-flex items-center gap-2 text-white border-b border-white pb-1 hover:text-gray-400 hover:border-gray-400 transition-colors">
-                View Projects <ArrowRight size={16} />
-              </a>
-              <a href={personalDetails.links.github} target="_blank" className="inline-flex items-center gap-2 text-gray-400 border-b border-gray-400 pb-1 hover:text-white hover:border-white transition-colors">
-                GitHub <ExternalLink size={16} />
-              </a>
-              <a 
-                href="/My_Resume.pdf" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-gray-400 border-b border-gray-400 pb-1 hover:text-white hover:border-white transition-colors"
-              >
-                Resume <FileText size={16} />
-              </a>
+          </div>
+          
+          {/* 2. BOTTOM LEFT (Mobile) / BOTTOM RIGHT (Desktop): Info (Location/Time) */}
+          {/* Mobile: items-start/text-left. Desktop: items-end/text-right. */}
+          <div className="flex flex-col gap-4 md:gap-2 items-start text-left md:items-end md:text-right font-mono shrink-0">
+            <div className="flex flex-col items-start md:items-end">
+              <span className="text-xs text-gray-400 uppercase tracking-wider">Location</span>
+              <span className="text-base text-white font-medium">Bhopal, India</span>
             </div>
-          </motion.div>
-        </div>
 
-        {/* --- RIGHT SIDE: New 3D Spline Scene --- */}
-        <div className="hidden md:block md:order-2 h-[400px] md:h-[600px] w-full relative z-10 ">
-          <Card className="w-full h-full bg-black/40 border-white/10 relative overflow-hidden rounded-2xl">
-           
-            <div className="absolute inset-0 z-0 group">
-               
-                <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-2xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
-                <img 
-                  src={profileImg} 
-                  alt="Profile" 
-                  className="relative w-full h-full object-cover rounded-2xl border-2 border-white/10 grayscale group-hover:grayscale-0 transition-all duration-500 shadow-2xl"
-                />
-                           
+            <div className="flex flex-col items-start md:items-end">
+              <span className="text-xs text-gray-400 uppercase tracking-wider">Local Time</span>
+              <span className="text-base text-white font-medium min-w-[60px]">
+                {time || "--:--"} 
+              </span>
             </div>
-          </Card>
-        </div>
+          </div>
 
+        </div>
       </div>
     </section>
   );
 };
 
-export default Hero;
+export default HeroSection;

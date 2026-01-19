@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 }
+
+
+@font-face {
+  font-family: 'Ghosthey';
+  src: url('./assets/fonts/ghosthey.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
