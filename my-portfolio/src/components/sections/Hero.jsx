@@ -16,6 +16,7 @@ const Hero = () => {
       {/* Container for the 2-column layout */}
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-40 items-center">
         
+        
         {/* --- LEFT SIDE: Original Text Content --- */}
         <div className="pointer-events-auto order-2 md:order-1 relative z-20 ">
           <motion.div
