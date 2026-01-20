@@ -3,7 +3,7 @@ import { motion, useScroll, useSpring, AnimatePresence } from "framer-motion";
 import CustomCursor from './components/CustomCursor'; 
 
 // UI Components
-import NeuralMatrixtBackground from "./components/ui/NeuralMatrixBackground";
+import NeuralMatrixBackground from "./components/ui/NeuralMatrixBackground";
 import Preloader from "./components/ui/Preloader";
 
 // Page Sections
