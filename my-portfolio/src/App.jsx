@@ -4,7 +4,7 @@ import CustomCursor from './components/CustomCursor';
 
 // UI Components
 import NeuralMatrixBackground from "./components/ui/NeuralMatrixBackground";
-import Preloader from "./components/ui/Preloader";
+import Preloader from "./components/ui/Preloader"; // This points to the component above
 
 // Page Sections
 import Navbar from "./components/Navbar";
@@ -13,9 +13,8 @@ import Projects from "./components/sections/Projects";
 import Experience from "./components/sections/Experience";
 import Skills from "./components/sections/Skills";
 import About from "./components/sections/About";
-import Contact from "./components/sections/Contact"; // <--- ADDED THIS IMPORT
+import Contact from "./components/sections/Contact"; 
 import Footer from "./components/Footer";
-// import ScrollBanner from "./components/sections/ScrollBanner"; // Import the new component
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -32,34 +31,32 @@ export default function App() {
       <CustomCursor />
       
       {/* 1. Preloader */}
-      <AnimatePresence mode="wait">
-        {loading && (
-          <Preloader onComplete={() => setLoading(false)} />
-        )}
-      </AnimatePresence>
+      <AnimatePresence>
+  {loading && <Preloader onComplete={() => setLoading(false)} />}
+</AnimatePresence>
 
-      {/* 2. Main App Content */}
-      <NeuralMatrixBackground />
-      
-      {/* Scroll Progress Bar */}
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-blue-500 origin-left z-60"
-        style={{ scaleX }}
-      />
-      
-      <Navbar />
-      
-      {/* Main Content Area (Pushed right for Sidebar Nav) */}
-      {/* <main className="md:pl-20 flex flex-col">  */}
-        <Hero />
-        {/* <ScrollBanner /> */}
-        <About />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Contact /> {/* Now defined! */}
-        <Footer />
-      {/* </main> */}
+      {/* 2. Main App Content - Only visible after loading or use opacity logic */}
+      <div className={loading ? "opacity-0 h-screen overflow-hidden" : "opacity-100 transition-opacity duration-1000"}>
+        <NeuralMatrixBackground />
+        
+        {/* Scroll Progress Bar */}
+        <motion.div
+          className="fixed top-0 left-0 right-0 h-1 bg-blue-500 origin-left z-60"
+          style={{ scaleX }}
+        />
+        
+        <Navbar />
+        
+        <main>
+          <Hero />
+          <About />
+          <Skills />
+          <Projects />
+          <Experience />
+          <Contact />
+          <Footer />
+        </main>
+      </div>
     </div>
   );
 }
