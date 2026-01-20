@@ -2,16 +2,22 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Briefcase, Calendar, MapPin, ArrowUpRight } from "lucide-react";
 import { experienceData } from "../../data/portfolioData";
+import FadeIn from "../ui/FadeIn";
 
 const Experience = () => {
   return (
     <section id="experience" className="relative z-10 py-24 px-6 max-w-5xl mx-auto">
       {/* Section Header */}
-      <div className="mb-16 border-b border-white/10 pb-4 flex items-center justify-between">
-        <span className="text-xs font-mono text-blue-400 uppercase tracking-widest border border-blue-500/20 bg-blue-500/5 px-3 py-1 rounded-full">
-          04 / Experience
-        </span>
-      </div>
+        <FadeIn>
+        <div className="flex items-center gap-4 mb-16">
+          <div className="h-px bg-white/10 flex-1" />
+          <span className="text-xs font-mono text-blue-400 uppercase tracking-widest border border-blue-500/20 bg-blue-500/5 px-3 py-1 rounded-full">
+            03 / Selected Projects
+          </span>
+          <div className="h-px bg-white/10 flex-1" />
+        </div>
+      </FadeIn>
+
 
       <div className="relative flex flex-col space-y-12">
         {/* Vertical Timeline Line */}
