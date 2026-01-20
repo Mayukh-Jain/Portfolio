@@ -63,7 +63,7 @@ const HeroSection = () => {
               Cloud & AI<br/>Engineer
             </h2>
             
-            <p className="text-sm md:text-base text-gray-300 md:text-gray-400 max-w-[280px] md:max-w-[300px] leading-snug opacity-90">
+            <p className="text-sm md:text-lg text-gray-300 md:text-gray-400 max-w-[280px] md:max-w-[300px] leading-snug opacity-90">
               Specializing in Automation, DevOps, and Intelligent Systems.
             </p>
           </div>
