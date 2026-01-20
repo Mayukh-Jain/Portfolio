@@ -38,7 +38,7 @@ const HeroSection = () => {
           src={LImg}
           className="
             /* MOBILE STYLES: Giant size, pushed to bottom right */
-            w-[180%] max-w-none 
+            w-[230%] max-w-none 
             translate-x-[35%] translate-y-[5%] 
             
             /* DESKTOP STYLES: Normal size, centered */
