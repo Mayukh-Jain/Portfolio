@@ -6,7 +6,7 @@ const Preloader = ({ onComplete }) => {
   const scrollRef = useRef(null);
 
   useEffect(() => {
-    const duration = 1500; 
+    const duration = 3500; 
     const intervalTime = duration / 100;
 
     const timer = setInterval(() => {
@@ -84,8 +84,8 @@ const Preloader = ({ onComplete }) => {
         style={{ boxShadow: '0 0 100px rgba(255, 255, 255, 0.81), inset 0 0 80px rgba(255, 255, 255, 0.4)' }}
       >
         <motion.div
-          animate={{ rotate: [55,135] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+          animate={{ rotate: [55,135], }}
+          transition={{ duration: 3.6, repeat:2 ,ease: "ease-in-out" }}
           className="absolute w-full h-full rounded-full pointer-events-none"
         >
           {/* THE DOT - Adjusted top to sit exactly on the 3px border */}
