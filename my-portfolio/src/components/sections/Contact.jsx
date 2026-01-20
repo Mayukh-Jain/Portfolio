@@ -1,9 +1,38 @@
 import React from "react";
-import { Mail, MapPin, Send, Linkedin, Github, Twitter, ExternalLink } from "lucide-react";
+import { Mail, MapPin, Send, Linkedin, Github } from "lucide-react";
 import FadeIn from "../ui/FadeIn";
-import { personalDetails } from "../../data/portfolioData"; // Import data
+import { personalDetails } from "../../data/portfolioData"; 
+import { useForm, ValidationError } from '@formspree/react';
 
 const Contact = () => {
+  // Replace "YOUR_FORM_ID" with the ID from your Formspree dashboard
+  const [state, handleSubmit] = useForm("mreeakdy");
+
+  // If the form is submitted successfully, show this UI
+  if (state.succeeded) {
+    return (
+      <section id="contact" className="relative z-10 py-24 px-6 max-w-7xl mx-auto text-center">
+        <FadeIn>
+          <div className="max-w-2xl mx-auto bg-white/5 border border-white/10 p-12 rounded-3xl backdrop-blur-sm">
+            <div className="w-20 h-20 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Send className="text-blue-400" size={32} />
+            </div>
+            <h2 className="text-3xl font-bold text-white mb-4">Message Sent!</h2>
+            <p className="text-gray-400 text-lg">
+              Thanks for reaching out, {personalDetails.name.split(' ')[0]}. I've received your message and will get back to you shortly.
+            </p>
+            <button 
+              onClick={() => window.location.reload()}
+              className="mt-8 px-8 py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl transition-all"
+            >
+              Send another message
+            </button>
+          </div>
+        </FadeIn>
+      </section>
+    );
+  }
+
   return (
     <section id="contact" className="relative z-10 py-24 px-6 max-w-7xl mx-auto">
       
@@ -59,7 +88,6 @@ const Contact = () => {
             </div>
           </FadeIn>
 
-          {/* Dynamic Social Links */}
           <FadeIn delay={0.3}>
             <div className="flex gap-4 mt-8">
               <a href={personalDetails.links.github} target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:scale-110 hover:border-white/30 transition-all text-gray-400 hover:text-white">
@@ -68,35 +96,58 @@ const Contact = () => {
               <a href={personalDetails.links.linkedin} target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:scale-110 hover:border-white/30 transition-all text-gray-400 hover:text-white">
                 <Linkedin size={20} />
               </a>
-              {/* Add more from data if needed */}
             </div>
           </FadeIn>
         </div>
 
         {/* Right Column: Form */}
         <FadeIn delay={0.4}>
-          <form 
-            action="https://formspree.io/f/YOUR_FORM_ID" // OPTIONAL: Add your Formspree ID here
-            method="POST"
-            className="space-y-6 bg-white/5 border border-white/10 p-8 rounded-3xl backdrop-blur-sm"
-          >
+          <form onSubmit={handleSubmit} className="space-y-6 bg-white/5 border border-white/10 p-8 rounded-3xl backdrop-blur-sm">
             <div className="space-y-2">
-              <label htmlFor="name" className="text-xs font-mono text-gray-400 uppercase tracking-wider">Name</label>
-              <input type="text" name="name" id="name" placeholder="John Doe" required className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-blue-500/50 focus:bg-black/40 transition-all"/>
+              <label htmlFor="full-name" className="text-xs font-mono text-gray-400 uppercase tracking-wider">Full Name</label>
+              <input 
+                id="full-name" 
+                type="text" 
+                name="name" 
+                placeholder="John Doe"
+                required 
+                className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-blue-500/50 focus:bg-black/40 transition-all" 
+              />
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="email" className="text-xs font-mono text-gray-400 uppercase tracking-wider">Email</label>
-              <input type="email" name="email" id="email" placeholder="john@example.com" required className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-blue-500/50 focus:bg-black/40 transition-all"/>
+              <label htmlFor="email" className="text-xs font-mono text-gray-400 uppercase tracking-wider">Email Address</label>
+              <input 
+                id="email" 
+                type="email" 
+                name="email" 
+                placeholder="john@example.com"
+                required 
+                className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-blue-500/50 focus:bg-black/40 transition-all" 
+              />
+              <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-400 text-xs mt-1" />
             </div>
 
             <div className="space-y-2">
               <label htmlFor="message" className="text-xs font-mono text-gray-400 uppercase tracking-wider">Message</label>
-              <textarea name="message" id="message" rows="4" placeholder="Tell me about your project..." required className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-blue-500/50 focus:bg-black/40 transition-all resize-none"/>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="4"
+                placeholder="Tell me about your project..."
+                required 
+                className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-blue-500/50 focus:bg-black/40 transition-all resize-none" 
+              />
+              <ValidationError prefix="Message" field="message" errors={state.errors} className="text-red-400 text-xs mt-1" />
             </div>
 
-            <button type="submit" className="w-full py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-900/20 flex items-center justify-center gap-2 group">
-              Send Message <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            <button 
+              type="submit" 
+              disabled={state.submitting} 
+              className="w-full py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl disabled:opacity-50 transition-all flex items-center justify-center gap-2 group shadow-lg shadow-blue-900/20"
+            >
+              {state.submitting ? 'Sending...' : 'Send Message'}
+              {!state.submitting && <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
             </button>
           </form>
         </FadeIn>
@@ -106,4 +157,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Contact;                                            

@@ -3,7 +3,7 @@ import { motion, useScroll, useSpring, AnimatePresence } from "framer-motion";
 import CustomCursor from './components/CustomCursor'; 
 
 // UI Components
-import SpotlightBackground from "./components/ui/SpotlightBackground";
+import NeuralMatrixtBackground from "./components/ui/NeuralMatrixBackground";
 import Preloader from "./components/ui/Preloader";
 
 // Page Sections
@@ -15,7 +15,7 @@ import Skills from "./components/sections/Skills";
 import About from "./components/sections/About";
 import Contact from "./components/sections/Contact"; // <--- ADDED THIS IMPORT
 import Footer from "./components/Footer";
-import ScrollBanner from "./components/sections/ScrollBanner"; // Import the new component
+// import ScrollBanner from "./components/sections/ScrollBanner"; // Import the new component
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -39,7 +39,7 @@ export default function App() {
       </AnimatePresence>
 
       {/* 2. Main App Content */}
-      <SpotlightBackground />
+      <NeuralMatrixBackground />
       
       {/* Scroll Progress Bar */}
       <motion.div
@@ -52,7 +52,7 @@ export default function App() {
       {/* Main Content Area (Pushed right for Sidebar Nav) */}
       {/* <main className="md:pl-20 flex flex-col">  */}
         <Hero />
-        <ScrollBanner />
+        {/* <ScrollBanner /> */}
         <About />
         <Skills />
         <Projects />
