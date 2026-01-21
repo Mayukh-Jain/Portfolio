@@ -95,7 +95,7 @@ const Navbar = () => {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="/My_Resume.pdf" 
+            href="/MayukhJain.pdf" 
             target="_blank" 
             rel="noopener noreferrer"
             // Mobile: Icon only (p-2). Desktop: Text + Icon (px-4 py-2)

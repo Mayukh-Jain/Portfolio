@@ -69,7 +69,7 @@ const About = () => {
                 <span className="text-sm font-medium text-gray-300 group-hover:text-white">GitHub</span>
               </a>
               <a 
-                href="/My_Resume.pdf" 
+                href="/MayukhJain.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all group"
