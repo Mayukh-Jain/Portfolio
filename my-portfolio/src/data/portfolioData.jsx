@@ -24,6 +24,16 @@ export const personalDetails = {
 export const projects = [
   {
     id: 1,
+    title: "Academia.AI",
+    category: "EdTech Platform",
+    src: cineAiImg,
+    tech: ["React", "FastAPI", "RAG", "Supabase", "Sentence Transformers", "Edge TTS", "pgvector", "Docker"],
+    description: "Academia.AI is an AI-powered learning platform that transforms academic PDFs into interactive chats, adaptive courses, and podcast-style audio using Retrieval-Augmented Generation (RAG). Built with React (Vite), FastAPI, Google Gemini 1.5, Supabase (Auth + pgvector), and Tailwind CSS.",
+    liveLink: "https://academia-ai-nu.vercel.app/",
+    repoLink: "https://github.com/Mayukh-Jain/Academia.ai"
+  },
+  {
+    id: 2,
     title: "Cine Ai",
     category: "AI Recommendation System",
     src: cineAiImg,
@@ -33,7 +43,7 @@ export const projects = [
     repoLink: "https://github.com/Mayukh-Jain/Cine-Ai"
   },
   {
-    id: 2,
+    id: 3,
     title: "Leaf Compass",
     category: "Agri-Tech Platform",
     src: leafCompassImg,
@@ -43,7 +53,7 @@ export const projects = [
     repoLink: "https://github.com/Mayukh-Jain/Leaf-Compass"
   },
   {
-    id: 3,
+    id: 4,
     title: "NYAYA.AI",
     category: "Legal Intelligence",
     src: nyayaImg,
@@ -53,7 +63,7 @@ export const projects = [
     repoLink: "https://github.com/Mayukh-Jain/Nyaya.AI"
   },
   {
-    id: 4,
+    id: 5,
     title: "Flood Prediction",
     category: "Predictive Analytics",
     src: floodImg,
