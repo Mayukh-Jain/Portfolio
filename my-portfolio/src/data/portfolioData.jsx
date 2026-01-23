@@ -135,10 +135,13 @@ export const education = [
 ];
 
 export const certifications = [
-  "Smartbridge Certified Machine Learning (Google)",
+  "AWS Cloud Practitioner Essentials",
+  "IBM Cloud Computing Fundamentals",
+  "IBM Introduction to Artificial Intelligence (AI)",
+  "IBM Information Technology Fundamentals",
   "Applied Machine Learning in Python (Univ. of Michigan)",
+  "Smartbridge Certified Machine Learning (Google)",
   "Microsoft Certified: Azure Data Fundamentals",
-  "IBM Cloud Computing Fundamentals"
 ];
 
 export const skillsData = [

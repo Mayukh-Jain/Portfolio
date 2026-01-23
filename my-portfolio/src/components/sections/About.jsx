@@ -1,11 +1,18 @@
-import React from "react";
-import { BookOpen, Award, ArrowUpRight, Github, FileText, Layers } from "lucide-react";
+import React, { useState } from "react";
+import { BookOpen, Award, ArrowUpRight, Github, FileText, Layers, ChevronDown, ChevronUp } from "lucide-react";
 import { education, certifications, personalDetails } from "../../data/portfolioData";
 import FadeIn from "../ui/FadeIn";
 import profileImg from "../../assets/image.png"; 
 import profileImg2 from "../../assets/profile.jpg"; 
 
 const About = () => {
+  // State for toggling certifications
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  // Logic to determine which certificates to display
+  const displayedCerts = isExpanded ? certifications : certifications.slice(0, 3);
+  const remainingCount = certifications.length - 3;
+
   return (
     <section id="about" className="relative z-10 py-24 px-6 max-w-7xl mx-auto">
       <FadeIn>
@@ -129,14 +136,15 @@ const About = () => {
               </div>
             </FadeIn>
 
-            {/* Certifications Card */}
+            {/* Certifications Card (UPDATED) */}
             <FadeIn delay={0.5}>
               <div className="h-full bg-white/5 border border-white/10 rounded-3xl p-6 hover:border-white/20 transition-colors">
                 <h3 className="flex items-center gap-2 text-white font-bold mb-6 text-sm uppercase tracking-wider">
                   <Award size={16} className="text-purple-400" /> Certifications
                 </h3>
-                <div className="flex flex-wrap gap-2 content-start">
-                  {certifications.map((cert, index) => (
+                
+                <div className="flex flex-wrap gap-2 content-start transition-all duration-300">
+                  {displayedCerts.map((cert, index) => (
                     <div 
                       key={index} 
                       className="group flex items-center gap-2 px-3 py-2 bg-white/5 hover:bg-white/10 border border-white/5 rounded-lg transition-all cursor-default"
@@ -144,9 +152,24 @@ const About = () => {
                       <span className="text-xs text-gray-300 group-hover:text-white transition-colors">{cert}</span>
                     </div>
                   ))}
-                  <div className="px-3 py-2 border border-dashed border-white/10 rounded-lg text-xs text-gray-500">
-                    + Learning More
-                  </div>
+
+                  {/* Toggle Button */}
+                  {certifications.length > 3 && (
+                    <button
+                      onClick={() => setIsExpanded(!isExpanded)}
+                      className="flex items-center gap-1 px-3 py-2 border border-dashed border-white/10 hover:border-white/30 hover:bg-white/5 rounded-lg text-xs text-gray-500 hover:text-gray-300 transition-all cursor-pointer"
+                    >
+                      {isExpanded ? (
+                        <>
+                          Show Less <ChevronUp size={12} />
+                        </>
+                      ) : (
+                        <>
+                          +{remainingCount} More <ChevronDown size={12} />
+                        </>
+                      )}
+                    </button>
+                  )}
                 </div>
               </div>
             </FadeIn>
