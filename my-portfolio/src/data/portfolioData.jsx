@@ -139,6 +139,8 @@ export const certifications = [
   "IBM Cloud Computing Fundamentals",
   "IBM Introduction to Artificial Intelligence (AI)",
   "IBM Information Technology Fundamentals",
+  "IBM Journey to Cloud: Envisioning Your Solution",
+  "IBM Getting Started with Artificial Intelligence",
   "Applied Machine Learning in Python (Univ. of Michigan)",
   "Smartbridge Certified Machine Learning (Google)",
   "Microsoft Certified: Azure Data Fundamentals",
