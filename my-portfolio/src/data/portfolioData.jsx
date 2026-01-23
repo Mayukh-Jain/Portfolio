@@ -2,6 +2,7 @@ import cineAiImg from "../assets/project-images/cineai.png";
 import leafCompassImg from "../assets/project-images/leafcompass.png";
 import nyayaImg from "../assets/project-images/nyaya.png";
 import floodImg from "../assets/project-images/flood.png";
+import AcademiaImg from "../assets/project-images/Academia.png";
 
 export const personalDetails = {
   name: "Mayukh Jain",
@@ -26,7 +27,7 @@ export const projects = [
     id: 1,
     title: "Academia.AI",
     category: "EdTech Platform",
-    src: cineAiImg,
+    src: AcademiaImg,
     tech: ["React", "FastAPI", "RAG", "Supabase", "Sentence Transformers", "Edge TTS", "pgvector", "Docker"],
     description: "Academia.AI is an AI-powered learning platform that transforms academic PDFs into interactive chats, adaptive courses, and podcast-style audio using Retrieval-Augmented Generation (RAG). Built with React (Vite), FastAPI, Google Gemini 1.5, Supabase (Auth + pgvector), and Tailwind CSS.",
     liveLink: "https://academia-ai-nu.vercel.app/",
