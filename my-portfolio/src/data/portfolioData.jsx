@@ -65,6 +65,16 @@ export const projects = [
   },
   {
     id: 5,
+    title: "ASTraFlow",
+    category: "Code Visualisation",
+    src: floodImg,
+    tech: [ "AST", "Flowchart", "Code-Visualization", "Tree-Sitter", "FastAPI", "React", "Developer-Tools", "monaco-editor", "react-flow", "dagre"],
+    description: "AST-powered developer tool that converts Python, JavaScript, and C++ source code into interactive, ISO-standard logic flowcharts for visual code analysis and documentation. Achieves 95% accuracy in parsing complex code structures using custom AST parsers.",
+    liveLink: "https://astra-flow-rho.vercel.app/",
+    repoLink: "https://github.com/Mayukh-Jain/ASTraFlow"
+  },
+  {
+    id: 6,
     title: "Flood Prediction",
     category: "Predictive Analytics",
     src: floodImg,
