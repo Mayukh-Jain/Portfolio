@@ -3,6 +3,7 @@ import leafCompassImg from "../assets/project-images/leafcompass.png";
 import nyayaImg from "../assets/project-images/nyaya.png";
 import floodImg from "../assets/project-images/flood.png";
 import AcademiaImg from "../assets/project-images/Academia.png";
+import astraflowImg from "../assets/project-images/astraflow.png";
 
 export const personalDetails = {
   name: "Mayukh Jain",
@@ -67,7 +68,7 @@ export const projects = [
     id: 5,
     title: "ASTraFlow",
     category: "Code Visualisation",
-    src: floodImg,
+    src: astraflowImg,
     tech: [ "AST", "Flowchart", "Code-Visualization", "Tree-Sitter", "FastAPI", "React", "Developer-Tools", "monaco-editor", "react-flow", "dagre"],
     description: "AST-powered developer tool that converts Python, JavaScript, and C++ source code into interactive, ISO-standard logic flowcharts for visual code analysis and documentation. Achieves 95% accuracy in parsing complex code structures using custom AST parsers.",
     liveLink: "https://astra-flow-rho.vercel.app/",
