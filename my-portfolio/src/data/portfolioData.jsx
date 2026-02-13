@@ -4,6 +4,7 @@ import nyayaImg from "../assets/project-images/nyaya.png";
 import floodImg from "../assets/project-images/flood.png";
 import AcademiaImg from "../assets/project-images/Academia.png";
 import astraflowImg from "../assets/project-images/astraflow.png";
+import soulScriptImg from "../assets/project-images/soulscript.png";
 
 export const personalDetails = {
   name: "Mayukh Jain",
@@ -83,6 +84,16 @@ export const projects = [
     description: "ML-powered flood risk assessment system achieving 80-90% accuracy. Integrates real-time weather data via OpenWeather API to improve forecasting efficiency by 40%. Deployed as a Flask web application for instant risk analysis.",
     liveLink: "https://flood-prediction-app-05sz.onrender.com/",
     repoLink: "https://github.com/Mayukh-Jain/Flood_Prediction_App"
+  },
+  {
+    id: 7,
+    title: "SoulScript",
+    category: "Narrative-Driven Interactive Gift Engine",
+    src: soulScriptImg,
+    tech: [ "React", "Tailwind CSS", "Framer Motion", "HTML5 Canvas", "React Router"],
+    description: "SoulScript is a narrative-driven, interactive digital gift engine specifically crafted for Valentine's Day, designed to transform personal memories into an immersive storytelling experience. Built with a modern tech stack of React, Tailwind CSS, and Framer Motion, the platform prioritizes aesthetic minimalism and high-end motion design to create a premium romantic gesture.",
+    liveLink: "https://soulscript-six.vercel.app/",
+    repoLink: "https://github.com/Mayukh-Jain/SoulScript"
   },
 ];
 
