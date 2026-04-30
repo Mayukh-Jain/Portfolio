@@ -109,6 +109,19 @@ export const projects = [
 // data/portfolioData.js
 export const experienceData = [
   {
+    role: "FOSSEE Summer Fellow (Osdag)",
+    company: "IIT Bombay",
+    companyUrl: "https://fossee.in/", // Optional
+    date: "April 2026 – Present",
+    description: [
+      "Contributing to Osdag, an open-source structural steel design software, under the FOSSEE initiative.",
+      "Developing the Desktop UI for the Bridge Module using PySide6 to handle complex parametric modeling and data visualization.",
+      "Implementing responsive design patterns for engineering workflows, ensuring compliance with IS 800:2007 specifications.",
+      "Collaborating with a multidisciplinary team to bridge backend structural logic with high-performance desktop interfaces."
+    ],
+    tech: ["Python", "PySide6", "Qt", "Open Source", "Git"]
+  },
+  {
     role: "Cloud Engineering Intern",
     company: "CloudAILabs",
     companyUrl: "https://cloudailabs.in/", // Optional
@@ -140,32 +153,33 @@ export const education = [
     year: "2023 – Present",
     score: "CGPA: 8.34"
   },
-  // {
-  //   institution: "Little Flower House", // Replace with your School Name
-  //   degree: "Higher Secondary (Class XII)",
-  //   year: "2021 - 2023",
-  //   score: "", // Replace with your score
-  //   desc: "Science Stream (PCM) with Computer Science"
-  // },
-  // {
-  //   institution: "Sacred Heart Convent School", // Replace with your School Name
-  //   degree: "Secondary School (Class X)",
-  //   year: "2009 - 2021",
-  //   score: "", // Replace with your score
-  //   desc: "General Studies"
-  // }
+  {
+    institution: "Little Flower House", // Replace with your School Name
+    degree: "Higher Secondary (Class XII)",
+    year: "2021 - 2023",
+    score: "", // Replace with your score
+    desc: "Science Stream (PCM) with Computer Science"
+  },
+  {
+    institution: "Sacred Heart Convent School", // Replace with your School Name
+    degree: "Secondary School (Class X)",
+    year: "2009 - 2021",
+    score: "", // Replace with your score
+    desc: "General Studies"
+  }
 ];
 
 export const certifications = [
+  "AWS Certified Solutions Architect – Associate",
   "AWS Cloud Practitioner Essentials",
-  "IBM Cloud Computing Fundamentals",
+  "Microsoft Certified: Azure Data Fundamentals",
+  "Applied Machine Learning in Python (Univ. of Michigan)",
+  "Smartbridge Certified Machine Learning (Google)",
   "IBM Introduction to Artificial Intelligence (AI)",
   "IBM Information Technology Fundamentals",
   "IBM Journey to Cloud: Envisioning Your Solution",
   "IBM Getting Started with Artificial Intelligence",
-  "Applied Machine Learning in Python (Univ. of Michigan)",
-  "Smartbridge Certified Machine Learning (Google)",
-  "Microsoft Certified: Azure Data Fundamentals",
+  "IBM Cloud Computing Fundamentals",
 ];
 
 export const skillsData = [
