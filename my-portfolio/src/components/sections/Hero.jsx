@@ -60,7 +60,7 @@ const HeroSection = () => {
           {/* 1. TOP LEFT (Mobile) / BOTTOM LEFT (Desktop): Role & Description */}
           <div className="flex flex-col gap-3 md:gap-3">
             <h2 className="text-5xl md:text-7xl text-white font-medium tracking-tight leading-[0.9]">
-              Cloud & AI<br/>Engineer
+              AI/ML Engineer<br/>& Cloud Architect
             </h2>
             
             <p className="text-sm md:text-lg text-gray-300 md:text-gray-400 max-w-[280px] md:max-w-[300px] leading-snug opacity-90">

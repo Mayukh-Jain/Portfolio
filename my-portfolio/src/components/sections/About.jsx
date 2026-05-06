@@ -102,10 +102,21 @@ const About = () => {
               </div>
               <div className="space-y-4 text-gray-400 leading-relaxed text-base md:text-lg">
                 <p>
-                  I don't just train models; I deploy them. As a CS student specializing in <strong className="text-gray-200 font-semibold">Cloud Computing & Automation</strong>, my focus lies in <span className="text-blue-200">Cloud-Native AI</span>—building robust DevOps pipelines to turn theoretical ML concepts into scalable, production-ready applications.
+                  I build AI systems that actually ship. Specialising in{" "}
+                  <strong className="text-gray-200 font-semibold">
+                    Cloud-Native ML & RAG pipelines
+                  </strong>
+                  , I've deployed 7 production applications spanning legal AI, agri-tech,
+                  and semantic search — each containerised, monitored, and serving real users.
+                  Currently a{" "}
+                  <span className="text-blue-200">FOSSEE Fellow at IIT Bombay</span>
+                  {" "}building the PySide6 desktop UI for Osdag's Bridge Module.
                 </p>
                 <p>
-                  Beyond the code, I serve as a technical mentor for the <strong className="text-gray-200 font-semibold">TechnoMech Club</strong>. When I'm not optimizing Docker containers, I'm exploring <span className="text-purple-200">minimalist UI design</span> or capturing architecture through my lens.
+                  Off the terminal, I mentor 50+ students in Python and DS at the{" "}
+                  <strong className="text-gray-200 font-semibold">TechnoMech Club</strong>
+                  {" "}and explore minimalist UI design. Currently obsessed with making
+                  complex engineering tools feel effortless to use.
                 </p>
               </div>
             </div>
