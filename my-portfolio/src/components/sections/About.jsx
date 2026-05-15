@@ -76,7 +76,7 @@ const About = () => {
                 <span className="text-sm font-medium text-gray-300 group-hover:text-white">GitHub</span>
               </a>
               <a 
-                href="/MayukhJain.pdf" 
+                href="https://docs.google.com/document/d/1p51jZ-MDomUS_fwxSlpzayTylu1lqucx7EfZDPSin9w/edit?usp=sharing" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all group"
