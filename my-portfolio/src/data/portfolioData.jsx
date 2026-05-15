@@ -151,7 +151,7 @@ export const education = [
     institution: "VIT Bhopal University",
     degree: "B.Tech CSE (Cloud Computing & Automation)",
     year: "2023 – Present",
-    score: "CGPA: 8.34 / 10",
+    score: "CGPA: 8.52 / 10",
     desc: "Specialisation: Cloud Computing & Automation"
   }
 ];
