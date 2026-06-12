@@ -114,10 +114,9 @@ export const experienceData = [
     companyUrl: "https://fossee.in/", // Optional
     date: "April 2026 – Present",
     description: [
-      "Contributed to Osdag, an open-source structural steel design software, under the FOSSEE initiative.",
-      "Developed the Desktop UI for the Bridge Module using PySide6 to handle complex parametric modeling and data visualization.",
-      "Implemented responsive design patterns for engineering workflows, ensuring compliance with IS 800:2007 specifications.",
-      "Shipped parametric UI components in PySide6 that render IS 800:2007-compliant steel design outputs for 3 bridge module types."
+      "Decoupled GUI from computation engine in Osdag, an open-source steel structure design software, by removing all PySide6 and osdag_gui dependencies from 20+ core calculation files, enabling osdag-core to be installed as a standalone pip package without any GUI requirements.",
+      "Implemented headless 3D rendering pipeline for CLI report generation using OCC.Display.OCCViewer.OffscreenRenderer (no Qt/PySide required), rendering 4 orthographic views (Isometric, Top, Front, Side) via Mesa/llvmpipe software OpenGL and embedding them into auto-generated PDF design reports.",
+      "Built and tested CLI tooling for batch steel connection design automation using Python Click, writing Windows batch and Linux bash test scripts that run IS 800:2007 design calculations across multiple OSI input files headlessly, producing structured PDF reports with full design checks and 3D views."
     ],
     tech: ["Python", "PySide6", "Qt", "Open Source", "Git"]
   },
@@ -151,7 +150,7 @@ export const education = [
     institution: "VIT Bhopal University",
     degree: "B.Tech CSE (Cloud Computing & Automation)",
     year: "2023 – Present",
-    score: "CGPA: 8.52 / 10",
+    score: "CGPA: 8.47 / 10",
     desc: "Specialisation: Cloud Computing & Automation"
   }
 ];
