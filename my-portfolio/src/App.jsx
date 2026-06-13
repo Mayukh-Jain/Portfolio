@@ -9,10 +9,12 @@ import Preloader from "./components/ui/Preloader"; // This points to the compone
 // Page Sections
 import Navbar from "./components/Navbar";
 import Hero from "./components/sections/Hero";
+import About from "./components/sections/About";
+import Featured from "./components/Featured";
+import Skills from "./components/sections/Skills";
 import Projects from "./components/sections/Projects";
 import Experience from "./components/sections/Experience";
-import Skills from "./components/sections/Skills";
-import About from "./components/sections/About";
+import CertificatesGallery from "./components/CertificatesGallery";
 import Contact from "./components/sections/Contact"; 
 import Footer from "./components/Footer";
 
@@ -50,9 +52,11 @@ export default function App() {
         <main>
           <Hero />
           <About />
+          <Featured />
           <Skills />
           <Projects />
           <Experience />
+          <CertificatesGallery />
           <Contact />
           <Footer />
         </main>
