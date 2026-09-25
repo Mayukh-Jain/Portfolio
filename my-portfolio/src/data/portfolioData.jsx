@@ -112,7 +112,7 @@ export const experienceData = [
     role: "FOSSEE Summer Fellow (Osdag)",
     company: "IIT Bombay",
     companyUrl: "https://fossee.in/", // Optional
-    date: "April 2026 – Present",
+    date: "April 2026 – July 2026",
     description: [
       "Decoupled GUI from computation engine in Osdag, an open-source steel structure design software, by removing all PySide6 and osdag_gui dependencies from 20+ core calculation files, enabling osdag-core to be installed as a standalone pip package without any GUI requirements.",
       "Implemented headless 3D rendering pipeline for CLI report generation using OCC.Display.OCCViewer.OffscreenRenderer (no Qt/PySide required), rendering 4 orthographic views (Isometric, Top, Front, Side) via Mesa/llvmpipe software OpenGL and embedding them into auto-generated PDF design reports.",
@@ -124,7 +124,7 @@ export const experienceData = [
     role: "Cloud Engineering Intern",
     company: "CloudAILabs",
     companyUrl: "https://cloudailabs.in/", // Optional
-    date: "Jan 2026 – Present",
+    date: "Jan 2026 – April 2026",
     description: [
       "Optimized Docker container orchestration, reducing deployment time by 40%.",
       "Assisted in setting up CI/CD pipelines using GitHub Actions and AWS CodePipeline.",
@@ -135,7 +135,7 @@ export const experienceData = [
   {
     role: "Technical Team Member",
     company: "TechnoMech Club",
-    date: "Aug 2024 – Present",
+    date: "Aug 2024 – Feb 2026",
     description: [
       "Mentored 50+ students in Python and Basic Data Structures.",
       "Organized 3 major hackathons, managing technical logistics for 200+ participants."
@@ -149,8 +149,8 @@ export const education = [
   {
     institution: "VIT Bhopal University",
     degree: "B.Tech CSE (Cloud Computing & Automation)",
-    year: "2023 – Present",
-    score: "CGPA: 8.47 / 10",
+    year: "2023 – 2027",
+    score: "CGPA: 8.46 / 10",
     desc: "Specialisation: Cloud Computing & Automation"
   }
 ];
