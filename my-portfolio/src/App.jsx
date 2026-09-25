@@ -12,7 +12,6 @@ import Hero from "./components/sections/Hero";
 import About from "./components/sections/About";
 import Featured from "./components/Featured";
 import Skills from "./components/sections/Skills";
-import LeetCodeStats from "./sections/LeetCodeStats";
 import Projects from "./components/sections/Projects";
 import Experience from "./components/sections/Experience";
 import CertificatesGallery from "./components/CertificatesGallery";
@@ -55,7 +54,6 @@ export default function App() {
           <About />
           <Featured />
           <Skills />
-          <LeetCodeStats />
           <Projects />
           <Experience />
           <CertificatesGallery />
