@@ -7,4 +7,13 @@ export default defineConfig({
     react(),
     Sitemap({ hostname: 'https://mayukhjain.vercel.app' })
   ],
+  server: {
+    proxy: {
+      '/leetcode-api': {
+        target: 'https://leetcode.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/leetcode-api/, '/graphql'),
+      },
+    },
+  },
 })

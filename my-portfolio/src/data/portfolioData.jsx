@@ -16,7 +16,7 @@ export const personalDetails = {
     github: "https://github.com/Mayukh-Jain",
     instagram: "https://www.instagram.com/mayukh__jain",
     linkedin: "https://www.linkedin.com/in/mayukh-jain-b4732128a",
-    leetcode: "https://leetcode.com/u/Fey5VQ6tLR/",
+    leetcode: "https://leetcode.com/u/jainmayukh/",
     codeforces: "https://codeforces.com/profile/jackspar",
     credly: "https://www.credly.com/users/mayukh-jain.4c6b99fe/badges#credly",
     kaggle: "https://www.kaggle.com/mayukhj", 

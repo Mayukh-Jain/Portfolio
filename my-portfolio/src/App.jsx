@@ -11,6 +11,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/sections/Hero";
 import About from "./components/sections/About";
 import Featured from "./components/Featured";
+import LeetCode from "./components/sections/LeetCode";
 import Skills from "./components/sections/Skills";
 import Projects from "./components/sections/Projects";
 import Experience from "./components/sections/Experience";
@@ -53,6 +54,7 @@ export default function App() {
           <Hero />
           <About />
           <Featured />
+          <LeetCode />
           <Skills />
           <Projects />
           <Experience />
