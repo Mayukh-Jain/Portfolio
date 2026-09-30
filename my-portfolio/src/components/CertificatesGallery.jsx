@@ -179,7 +179,7 @@ const CertificatesGallery = () => {
           <div className="flex items-center gap-4 flex-1">
             <div className="h-px bg-white/10 w-8 md:w-12" />
             <span className="text-xs font-mono text-blue-400 uppercase tracking-widest border border-blue-500/20 bg-blue-500/5 px-3 py-1 rounded-full whitespace-nowrap">
-              05 / Certifications
+              06 / Certifications
             </span>
             <div className="h-px bg-white/10 flex-1" />
           </div>

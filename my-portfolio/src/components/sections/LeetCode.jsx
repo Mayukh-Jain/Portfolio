@@ -786,7 +786,7 @@ const LeetCode = () => {
       <FadeIn>
         <header className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-sm font-medium text-amber-400">03 / LeetCode</p>
+            <p className="text-sm font-medium text-amber-400">02 / LeetCode</p>
             <h2 className="mt-3 text-4xl font-semibold tracking-tight text-white md:text-5xl">
               Problem solving
             </h2>
